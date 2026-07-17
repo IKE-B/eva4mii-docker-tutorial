@@ -13,9 +13,9 @@ Das Projekt enthält alle Dateien, um das Beispiel, welches im Tutorial-Video ge
 ├── Dockerfile                     # Anleitung für Docker, wie das Image gebaut wird
 ├── Docker_Tutorial.R              # Das R-Skript (Analyse-Code)
 ├── pima-docker-repo.tar           # Gesamtes Projekt als TAR-Datei
-├── input/
+├── Docker_In/
 │   └── pima_raw_data.csv          # Eingabedaten (CSV) 
-└── output/
+└── Docker_Out/
     ├── pima_summary_metrics.csv   # Beispiel-Ergebnis: Statistiken
     └── pima_bmi_glucose_plot.png  # Beispiel-Ergebnis: Plot
 ```
@@ -24,9 +24,9 @@ Das Projekt enthält alle Dateien, um das Beispiel, welches im Tutorial-Video ge
 |-------|-----------|
 | **Dockerfile** | Sagt Docker: "Starte mit R, installiere diese Pakete, kopiere das Skript." |
 | **Docker_Tutorial.R** | Das R-Skript: liest CSV → berechnet Statistiken → erstellt Plot → speichert Ergebnisse |
-| **input/** | Ordner für Eingabedaten |
+| **Docker_In/** | Ordner für Eingabedaten |
 | **pima_raw_data.csv** | Eingabedaten: Gesundheitsmessungen von Frauen der Pima-Indianer-Bevölkerung |
-| **output/** | Ordner für Ergebnisse. Enthält bereits die Dateien, die das R-Skript generiert. |
+| **Docker_Out/** | Ordner für Ergebnisse. Enthält bereits die Dateien, die das R-Skript generiert. |
 | **pima-docker-repo.tar** | Docker Image als TAR-Export - so kann das Projekt mit Kolleg:innen geteilt werden |
 
 ## 🚀 Workflow in Docker Desktop
@@ -62,7 +62,7 @@ Das Skript gibt hilfreiche Fehlermeldungen aus (mit `cat()`), z.B. wenn die CSV 
 Wenn du das Image/Container mit Kollegen teilst, sag ihnen:
 - ✅ Wie heißen die **Umgebungsvariablen** für das Skript? (Antwort: `CSV_FILE`)
 - ✅ Welche **Ergebnisdateien** werden erstellt? (Antwort: `pima_summary_metrics.csv` und `pima_bmi_glucose_plot.png`)
-- ✅ Welche **Ordner** müssen gemountet werden? (Antwort: `/input` und `/output`)
+- ✅ Welche **Ordner** müssen gemountet werden? (Antwort: `/Docker_In` und `/Docker_Out`)
 
 ### Schritt 1: Docker Image bauen
 
