@@ -22,7 +22,7 @@ Das Projekt enthält alle Dateien, um das Beispiel, welches im Tutorial-Video ge
 
 | Datei | Erklärung |
 |-------|-----------|
-| **Dockerfile** | Sagt Docker: "Starte mit R, installiere diese Pakete, kopiere das Skript." |
+| **Dockerfile** | Sagt Docker: "Starte mit R, installiere diese Pakete, kopiere das Skript." Kann mit jedem Texteditor geöffnet und bearbeitet werden; wichtig: Datei hat keine Dateiendung! |
 | **Docker_Tutorial.R** | Das R-Skript: liest CSV → berechnet Statistiken → erstellt Plot → speichert Ergebnisse |
 | **Docker_In/** | Ordner für Eingabedaten |
 | **pima_raw_data.csv** | Eingabedaten: Gesundheitsmessungen von Frauen der Pima-Indianer-Bevölkerung |
