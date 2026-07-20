@@ -12,9 +12,9 @@ Das Projekt enthält alle Dateien, um das Beispiel, welches im Tutorial-Video ge
 .
 ├── Dockerfile                     # Anleitung für Docker, wie das Image gebaut wird
 ├── Docker_Tutorial.R              # Das R-Skript (Analyse-Code)
-├── Docker_In/
+├── Docker_In\
 │   └── pima_raw_data.csv          # Eingabedaten (CSV) 
-└── Docker_Out/
+└── Docker_Out\
     ├── pima_summary_metrics.csv   # Beispiel-Ergebnis: Statistiken
     └── pima_bmi_glucose_plot.png  # Beispiel-Ergebnis: Plot
 ```
@@ -23,9 +23,9 @@ Das Projekt enthält alle Dateien, um das Beispiel, welches im Tutorial-Video ge
 |-------|-----------|
 | **Dockerfile** | Sagt Docker: "Starte mit R, installiere diese Pakete, kopiere das Skript." <br> Kann mit jedem Texteditor geöffnet und bearbeitet werden; wichtig: Datei hat keine Dateiendung! |
 | **Docker_Tutorial.R** | Das R-Skript: liest CSV → berechnet Statistiken → erstellt Plot → speichert Ergebnisse |
-| **Docker_In/** | Ordner für Eingabedaten |
+| **Docker_In** | Ordner für Eingabedaten |
 | **pima_raw_data.csv** | Eingabedaten: Gesundheitsmessungen von Frauen der Pima-Indianer-Bevölkerung |
-| **Docker_Out/** | Ordner für Ergebnisse. Enthält bereits die Dateien, die das R-Skript generiert. |
+| **Docker_Out** | Ordner für Ergebnisse. Enthält bereits die Dateien, die das R-Skript generiert. |
 
 Zusätzlich liegt das **fertige Image im DockerHub** mit dem Namen schoenherrl/eva4mii_docker_tutorial.
 
@@ -62,7 +62,7 @@ Das Skript gibt hilfreiche Fehlermeldungen aus (mit `cat()`), z.B. wenn die CSV 
 Wenn du das Image/Container mit Kollegen teilst, sag ihnen:
 - ✅ Wie heißen die **Umgebungsvariablen** für das Skript? (Antwort: `CSV_FILE`)
 - ✅ Welche **Ergebnisdateien** werden erstellt? (Antwort: `pima_summary_metrics.csv` und `pima_bmi_glucose_plot.png`)
-- ✅ Welche **Ordner** müssen gemountet werden? (Antwort: lokaler Ordner `/Docker_In` auf Container-Ordner `/input` und lokaler Ordner `/Docker_Out` auf Container-Ordner `/output`)
+- ✅ Welche **Ordner** müssen gemountet werden? (Antwort: lokaler Ordner `\Docker_In` auf Container-Ordner `/input` und lokaler Ordner `\Docker_Out` auf Container-Ordner `/output`)
 
 ### Schritt 1: Docker Image bauen
 
