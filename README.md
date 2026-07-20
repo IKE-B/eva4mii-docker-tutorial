@@ -62,7 +62,7 @@ Das Skript gibt hilfreiche Fehlermeldungen aus (mit `cat()`), z.B. wenn die CSV 
 Wenn du das Image/Container mit Kollegen teilst, sag ihnen:
 - ✅ Wie heißen die **Umgebungsvariablen** für das Skript? (Antwort: `CSV_FILE`)
 - ✅ Welche **Ergebnisdateien** werden erstellt? (Antwort: `pima_summary_metrics.csv` und `pima_bmi_glucose_plot.png`)
-- ✅ Welche **Ordner** müssen gemountet werden? (Antwort: `/Docker_In` und `/Docker_Out`)
+- ✅ Welche **Ordner** müssen gemountet werden? (Antwort: lokaler Ordner `/Docker_In` auf Container-Ordner `/input` und lokaler Ordner `/Docker_Out` auf Container-Ordner `/output`)
 
 ### Schritt 1: Docker Image bauen
 
