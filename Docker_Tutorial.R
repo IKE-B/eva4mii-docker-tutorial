@@ -25,7 +25,7 @@ if (csv_filename == "") {
   cat("\n✗ Error: CSV_FILE environment variable not set\n\n")
   cat("To use this container, set the CSV_FILE environment variable:\n\n")
   cat("Docker command on CLI:\n")
-  cat("docker run -e CSV_FILE=pima_raw_data.csv -v ./Input:/input -v ./Output:/output imagename:1.0\n")
+  cat("docker run -e CSV_FILE=pima_raw_data.csv -v .\Input:/input -v .\Output:/output imagename:1.0\n")
   cat("Or use DockerDesktop and set the environment variable under optional settings.")
   stop("CSV_FILE environment variable must be set")
 }
