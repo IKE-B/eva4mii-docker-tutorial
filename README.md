@@ -12,7 +12,6 @@ Das Projekt enthält alle Dateien, um das Beispiel, welches im Tutorial-Video ge
 .
 ├── Dockerfile                     # Anleitung für Docker, wie das Image gebaut wird
 ├── Docker_Tutorial.R              # Das R-Skript (Analyse-Code)
-├── pima-docker-repo.tar           # Gesamtes Projekt als TAR-Datei
 ├── Docker_In/
 │   └── pima_raw_data.csv          # Eingabedaten (CSV) 
 └── Docker_Out/
@@ -27,7 +26,8 @@ Das Projekt enthält alle Dateien, um das Beispiel, welches im Tutorial-Video ge
 | **Docker_In/** | Ordner für Eingabedaten |
 | **pima_raw_data.csv** | Eingabedaten: Gesundheitsmessungen von Frauen der Pima-Indianer-Bevölkerung |
 | **Docker_Out/** | Ordner für Ergebnisse. Enthält bereits die Dateien, die das R-Skript generiert. |
-| **pima-docker-repo.tar** | Docker Image als TAR-Export - so kann das Projekt mit Kolleg:innen geteilt werden |
+
+Zusätzlich liegt das **fertige Image im DockerHub** mit dem Namen schoenherrl/eva4mii_docker_tutorial.
 
 ## 🚀 Workflow in Docker Desktop
 
@@ -83,7 +83,7 @@ Docker liest die `Dockerfile`, installiert die R-Pakete und erstellt ein Image. 
 
 ### Schritt 2: Image als TAR speichern
 
-Speichere das fertige Image als TAR-Datei – so kannst du es mit Kolleg:innen teilen:
+Speichere das fertige Image als TAR-Datei, so kannst du es mit Kolleg:innen teilen:
 
 ```bash
 docker save pima-analysis:1.0 -o pima-analysis.tar
@@ -100,6 +100,9 @@ docker load --input pima-analysis.tar
 ```
 
 Wenn du das Image erstmalig entpackst, dann taucht es nun im Images Tab im DockerDesktop auf und kann von dort ausgeführt werden.
+
+**Alternativ:** Das fertige Image liegt außerdem im DockerHub unter dem Namen schoenherrl/eva4mii_docker_tutorial. <br>
+Von dort kann es über DockerDesktop/Docker Hub auch direkt gepullt werden und mit Schritt 4 weiter gemacht werden.
 
 
 ### Schritt 4: Container ausführen
