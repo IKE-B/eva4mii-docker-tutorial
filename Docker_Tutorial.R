@@ -25,7 +25,7 @@ if (csv_filename == "") {
   cat("\n✗ Error: CSV_FILE environment variable not set\n\n")
   cat("To use this container, set the CSV_FILE environment variable:\n\n")
   cat("Docker command on CLI:\n")
-  cat("docker run -e CSV_FILE=pima_raw_data.csv -v .\Input:/input -v .\Output:/output imagename:1.0\n")
+  cat("docker run -e CSV_FILE=pima_raw_data.csv -v ./Input:/input -v ./Output:/output imagename:1.0\n")
   cat("Or use DockerDesktop and set the environment variable under optional settings.")
   stop("CSV_FILE environment variable must be set")
 }
@@ -37,10 +37,10 @@ input_file <- file.path("/input", csv_filename)
 
 # Check if file exists
 if (!file.exists(input_file)) {
-  cat("\n✗ Error: File not found at /data/", csv_filename, "\n\n", sep = "")
+  cat("\n✗ Error: File not found at /input/", csv_filename, "\n\n", sep = "")
   cat("Make sure:\n")
   cat("1. The filename is correct: ", csv_filename, "\n", sep = "")
-  cat("2. The file is in your mounted data folder\n")
+  cat("2. The file is in your mounted input folder\n")
   cat("3. The folder is mounted to /input\n\n")
   stop("CSV file not found: ", input_file)
 }
