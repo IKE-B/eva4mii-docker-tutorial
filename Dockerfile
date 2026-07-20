@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 # Install R packages
 RUN R -e "install.packages(c('ggplot2', 'dplyr', 'MASS'))"
 
-# Copy the script into the container working directory
+# Copy the script into the container working directory; script and dockerfile need to be in same folder
 COPY Docker_Tutorial.R /analysis/
 
 # Set script as entry point; defines what is done when container is started
