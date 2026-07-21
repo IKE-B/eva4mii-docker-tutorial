@@ -116,7 +116,7 @@ Von dort kann es über DockerDesktop/Docker Hub auch direkt gepullt werden und m
    - mehrere Volumes kannst du mit dem **+** Symbol hinzufügen
 5. **Environment Variables** hinzufügen
    - die Variable heißt CSV_FILE
-   - der Value ist der Dateiname unserer Input-Datei, hier_ pima_raw_data.csv
+   - der Value ist der Dateiname unserer Input-Datei, hier pima_raw_data.csv
 6. Klicke auf **Run**: Container startet
 
 
