@@ -27,7 +27,7 @@ Das Projekt enthält alle Dateien, um das Beispiel, welches im Tutorial-Video ge
 | **pima_raw_data.csv** | Eingabedaten: Gesundheitsmessungen von Frauen der Pima-Indianer-Bevölkerung |
 | **Docker_Out** | Ordner für Ergebnisse. Enthält bereits die Dateien, die das R-Skript generiert. |
 
-Zusätzlich liegt das **fertige Image im DockerHub** mit dem Namen schoenherrl/eva4mii_docker_tutorial.
+Zusätzlich liegt das **fertige Image im Docker Hub** mit dem Namen schoenherrl/eva4mii_docker_tutorial.
 
 ## 🚀 Workflow in Docker Desktop
 
@@ -99,15 +99,15 @@ Wenn du das Image später (oder auf einem anderen Computer) nutzen möchtest, la
 docker load --input pima-analysis.tar
 ```
 
-Wenn du das Image erstmalig entpackst, dann taucht es nun im Images Tab im DockerDesktop auf und kann von dort ausgeführt werden.
+Wenn du das Image erstmalig entpackst, dann taucht es nun im Images Tab im Docker Desktop auf und kann von dort ausgeführt werden.
 
-**Alternativ:** Das fertige Image liegt außerdem im DockerHub unter dem Namen schoenherrl/eva4mii_docker_tutorial. <br>
-Von dort kann es über DockerDesktop/Docker Hub auch direkt gepullt werden und mit Schritt 4 weiter gemacht werden.
+**Alternativ:** Das fertige Image liegt außerdem im Docker Hub unter dem Namen schoenherrl/eva4mii_docker_tutorial. <br>
+Von dort kann es über Docker Desktop/Docker Hub auch direkt gepullt werden und mit Schritt 4 weiter gemacht werden.
 
 
 ### Schritt 4: Container ausführen
 
-1. Öffne den **Images Tab in DockerDesktop**
+1. Öffne den **Images Tab in Docker Desktop**
 2. Klicke beim Image auf das **Play-Icon** (▶)
 3. Lege einen Namen für den Container fest, bspw.: docker_tutorial
 4. **Volumes** hinzufügen (optional settings Tab)
@@ -126,6 +126,23 @@ Im `output/`-Ordner auf deinem Rechner findest du nun:
 - **pima_summary_metrics.csv** – Statistiken (Anzahl, Durchschnitte, Diabetes-Häufigkeit)
 - **pima_bmi_glucose_plot.png** – Visualisierung (Beziehung BMI ↔ Glukose)
 
----
+
+<br>
 
 **Viel Erfolg beim Lernen! 🐳**
+
+<br>
+
+---
+
+<br>
+
+## Trademarks
+
+Docker and the Docker logo are trademarks or registered trademarks of Docker, Inc. in the United States and/or other countries.
+
+Microsoft, Windows, Windows Subsystem for Linux, and Microsoft Azure are trademarks of the Microsoft group of companies.
+
+GitHub is a trademark of GitHub, Inc.
+
+All other trademarks are the property of their respective owners.
